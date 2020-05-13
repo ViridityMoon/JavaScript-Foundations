@@ -152,7 +152,7 @@ function variableInterestRate(P, C, I, N){
 
         
 
-    console.log(`${name}, with an interest rate of ${I.toFixed(2)} your monthly rate is ${monthlyRate.toFixed(0)}`);
+    console.log(`${name}, with an interest rate of ${I.toFixed(3)} your monthly rate is ${monthlyRate.toFixed(0)}`);
     
     }
         
