@@ -130,7 +130,7 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.055, your monthly rate is $1136"
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
-function variableInterestRate(P, I, N){
+function variableInterestRate(P, C, I, N){
 
     for(let i = 0;i<9;i++){
         if (i === 0){
@@ -138,7 +138,11 @@ function variableInterestRate(P, I, N){
         } else {
             I = I + 0.005;
         }
-    
+            if (C > 740){
+                I-=0.005;
+            } else if (C < 660){
+                I+=0.005;
+            }
     const name = 'Noah';
     const periods = (N*12);
     const monthlyInterestRate = (I/12);
@@ -154,7 +158,7 @@ function variableInterestRate(P, I, N){
         
 }
     
-variableInterestRate(200000, 0.04, 30);
+variableInterestRate(200000, 700, 0.04, 30);
 
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
